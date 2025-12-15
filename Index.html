@@ -1,202 +1,130 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Présentation de la série The 100</title>
+    <title>Série TV - Accueil</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> 
-    
-    <style>
-        /* Styles personnalisés */
-        
-        /* Bannière d'en-tête (utilisée pour le titre H1 dans le conteneur) */
-        .header-banner {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding-top: 1rem; 
-            margin: 0 0 1.5rem 0; 
-            overflow: hidden;
-        }
 
-        .header-banner h1 {
-            color: white;
-            text-shadow: none; 
-            background-color: transparent; 
-            padding: 0;
-            font-size: 2.5rem;
-            text-align: center;
-        }
-
-        /* Styles pour les titres H2 */
-        h2 {
-            /* Couleur inspirée de la série (vert/cyan) */
-            color: #64ffda !important; 
-            border-bottom: 2px solid #64ffda;
-            padding-bottom: 5px;
-            margin-top: 2rem;
-            margin-bottom: 1rem; 
-        }
-        
-        /* Style des liens par défaut dans le corps */
-        .container-lg a {
-            color: #64ffda; 
-            text-decoration: none; 
-        }
-
-        .container-lg a:hover {
-            color: #92ffe6; 
-            text-decoration: underline; 
-        }
-        
-        /* Style général pour la Navbar interne */
-        .sub-navbar {
-            background-color: #000000; /* Fond noir solide */
-            margin-top: -1rem;
-            margin-bottom: 2rem;
-            border-radius: 6px;
-            padding: 0.5rem 0;
-        }
-        
-        /* Styles pour le centrage du menu et l'affichage des "carrés" */
-        .sub-navbar .nav-item {
-            /* Marge entre les "carrés" */
-            margin-right: 0.5rem; 
-            margin-bottom: 0.5rem; 
-        }
-
-        .sub-navbar .nav-link {
-            /* Style de base du lien */
-            color: white !important;
-            border: 1px solid #64ffda; /* Bordure cyan pour simuler le carré */
-            border-radius: 5px; /* Coins légèrement arrondis */
-            padding: 0.5rem 1rem; /* Espace autour du texte */
-            transition: all 0.3s; /* Transition pour l'effet de survol */
-        }
-        
-        .sub-navbar .nav-link:hover {
-            color: #1a1a1a !important; /* Texte sombre au survol */
-            background-color: #64ffda; /* Fond cyan au survol */
-            text-decoration: none;
-        }
-        /* Fin NOUVEAU STYLE */
-
-    </style>
+    <link rel="stylesheet" href="style.css"> 
 </head>
+<body class="d-flex flex-column min-vh-100">
 
-<body class="bg-dark text-light"> 
-
-
-    <div class="container-lg bg-dark text-light p-4 shadow rounded-3 my-5">
-        
-        <div class="header-banner">
-            <h1>🚀 Présentation Générale de la série The 100</h1>
-        </div>
-        
-        <nav class="sub-navbar navbar-expand-lg">
-            <div class="container-fluid p-0">
-                
-                <button class="navbar-toggler btn btn-sm btn-outline-info" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu Sections
+    <header class="shadow-sm">
+        <nav class="navbar navbar-expand-lg custom-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand custom-brand" href="index.html">THE 100</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-                
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav d-flex flex-wrap"> 
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#top">Haut de Page</a>
+                            <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#infos-generales">Infos Générales</a>
+                            <a class="nav-link" href="personnages.html">Personnages</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#synopsis">Synopsis</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#affiche">Affiche</a>
+                            <a class="nav-link" href="diffusions.html">Diffusions/Saisons</a>
                         </li>
                     </ul>
+                    <button id="theme-toggle" class="btn btn-sm btn-outline-info">
+                        Mode Clair 
+                    </button>
                 </div>
             </div>
         </nav>
-        <h2 id="infos-generales">ℹ️ Informations Générales</h2>
-        <table class="table table-dark table-striped mt-3">
-            <thead>
-                <tr>
-                    <th>Catégorie</th>
-                    <th>Détails</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Titre Original</strong></td>
-                    <td><em>The 100</em></td>
-                </tr>
-                <tr>
-                    <td><strong>Créateur/Showrunner</strong></td>
-                    <td>Jason Rothenberg</td>
-                </tr>
-                <tr>
-                    <td><strong>Basé sur</strong></td>
-                    <td>La série de romans de Kass Morgan</td>
-                </tr>
-                <tr>
-                    <td><strong>Genre</strong></td>
-                    <td>Science-fiction, Post-apocalyptique, Drame pour adolescents</td>
-                </tr>
-                <tr>
-                    <td><strong>Pays d'origine</strong></td>
-                    <td>États-Unis</td>
-                </tr>
-                <tr>
-                    <td><strong>Chaîne de diffusion originale</strong></td>
-                    <td>The CW</td>
-                </tr>
-                <tr>
-                    <td><strong>Nombre de Saisons</strong></td>
-                    <td>7 (La série est terminée)</td>
-                </tr>
-                <tr>
-                    <td><strong>Années de diffusion</strong></td>
-                    <td>2014 - 2020</td>
-                </tr>
-            </tbody>
-        </table>
+    </header>
 
-        <h2 id="synopsis">🌍 Synopsis</h2>
-        <p class="lead"><strong>The 100</strong> se déroule près d'un siècle après qu'une guerre nucléaire ait décimé la population de la Terre, rendant la planète inhabitable.</p>
-
-        <ul class="list-unstyled">
-            <li class="mb-2">
-                <span class="text-warning">🔸</span> <strong>Le Contexte :</strong> Les seuls survivants connus sont les habitants de l'<strong>Arche</strong>, une station spatiale. Sur l'Arche, les ressources sont limitées et les lois sont extrêmement strictes.
-            </li>
-            <li class="mb-2">
-                <span class="text-warning">🔸</span> <strong>Le Point de Départ :</strong> L'Arche se dégrade. Le Conseil envoie un groupe de <strong>cent jeunes délinquants</strong> (les "100") sur Terre pour déterminer si la planète est redevenue viable.
-            </li>
-            <li class="mb-2">
-                <span class="text-warning">🔸</span> <strong>La Découverte :</strong> Une fois arrivés, les 100 découvrent un monde sauvage et réalisent que la Terre n'est pas inhabitée : ils doivent faire face aux survivants, appelés les **Natifs** (*Grounders*).
-            </li>
-            <li class="mb-2">
-                <span class="text-warning">🔸</span> <strong>L'Enjeu :</strong> La survie de l'espèce humaine repose sur les choix de ces jeunes, qui doivent s'adapter à un nouveau monde.
-            </li>
-        </ul>
-
-        <h2 id="affiche">🖼️ Affiche (Description générale)</h2>
-        <p>L'affiche emblématique de la série met souvent en contraste :</p>
-        <ul class="list-unstyled">
-            <li class="mb-1"><span class="text-warning">🔸</span> <strong>Les Personnages Principaux :</strong> Les jeunes héros (Clarke, Bellamy, etc.) au premier plan.</li>
-            <li class="mb-1"><span class="text-warning">🔸</span> <strong>Le Paysage :</strong> Un fond de forêt luxuriante ou de paysage post-apocalyptique.</li>
-            <li class="mb-1"><span class="text-warning">🔸</span> <strong>L'Origine :</strong> Un élément faisant référence à l'<strong>Arche</strong> spatiale dans le ciel, symbolisant leur passé.</li>
-        </ul>
+    <main class="container my-5 flex-grow-1">
         
-        <p class="text-center mt-4">
-            <a href="https://www.warnerbros.com/tv/100" class="btn btn-outline-info btn-lg">
-                Visiter le site officiel de la série
-            </a>
-        </p>
+        <h1 class="display-4 mb-4 custom-text-accent">Présentation Générale de THE 100</h1>
 
-    </div>
+        <div class="row">
+
+            <div class="col-lg-8 mb-5">
+                <section id="synopsis" class="p-4 custom-card h-100">
+                    <h2 class="custom-text-accent"> Synopsis</h2>
+                    <p class="lead">
+                        [Insérez ici un résumé accrocheur de la série. Par exemple : La série suit les aventures de... qui doivent faire face à...]
+                    </p>
+                    <p>
+                        [Paragraphe de détails sur l'intrigue et l'univers.]
+                    </p>
+                </section>
+            </div>
+
+            <div class="col-lg-4 mb-5">
+                
+                <section class="mb-4">
+                    <h2 class="custom-text-accent">🖼️ Affiche / Visuel</h2>
+                    <figure class="figure">
+                        <img src="./image/the-100.webp" class="figure-img img-fluid rounded custom-border-accent" alt="Affiche de la série">
+                        <figcaption class="figure-caption text-center custom-text-secondary">Image promotionnelle principale.</figcaption>
+                    </figure>
+                </section>
+                
+                <section>
+                    <h2 class="custom-text-accent">ℹ️ Informations Générales</h2>
+                    <table class="table custom-table">
+                        <tbody>
+                            <tr><th>Titre Original</th><td>[Titre]</td></tr>
+                            <tr><th>Créateur(s)</th><td>[Nom]</td></tr>
+                            <tr><th>Genre</th><td>[Science-fiction, Drame, etc.]</td></tr>
+                            <tr><th>Diffusion originale</th><td>[Année de début - Année de fin]</td></tr>
+                            <tr><th>Chaîne</th><td>[Nom de la chaîne]</td></tr>
+                            <tr><th>Nombre de Saisons</th><td>[X]</td></tr>
+                        </tbody>
+                    </table>
+                </section>
+
+            </div>
+            
+        </div>
+        </main>
+
+    <footer class="text-center mt-auto p-3 custom-footer">
+        <p class="mb-0">Projet Web | [Nom de la Série] | © 2025</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('theme-toggle');
+            const htmlElement = document.documentElement;
+
+            if (!themeToggle) return; 
+
+            // Fonction pour appliquer le thème et mettre à jour le bouton
+            function updateTheme(theme) {
+                htmlElement.setAttribute('data-theme', theme);
+                
+                // Met à jour le texte et les classes Bootstrap du bouton
+                if (theme === 'dark') {
+                    themeToggle.classList.remove('btn-outline-primary');
+                    themeToggle.classList.add('btn-outline-info');
+                    themeToggle.textContent = 'Mode Clair ☀️';
+                } else {
+                    themeToggle.classList.remove('btn-outline-info');
+                    themeToggle.classList.add('btn-outline-primary');
+                    themeToggle.textContent = 'Mode Sombre 🌙';
+                }
+            }
+
+            // Lit le thème actuel (déterminé par l'attribut data-theme sur <html>)
+            let currentTheme = htmlElement.getAttribute('data-theme') || 'dark';
+            updateTheme(currentTheme);
+
+            // Événement au clic
+            themeToggle.addEventListener('click', () => {
+                // Change 'dark' en 'light' ou 'light' en 'dark'
+                currentTheme = (currentTheme === 'dark') ? 'light' : 'dark';
+                updateTheme(currentTheme);
+            });
+        });
+    </script>
 </body>
 </html>

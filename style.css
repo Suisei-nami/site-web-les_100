@@ -1,0 +1,105 @@
+/* -------------------------------------- */
+/* 1. Définitions des variables de thème */
+/* -------------------------------------- */
+
+/* Vitesse de transition pour un changement de thème fluide */
+:root {
+    --transition-speed: 0.5s;
+}
+
+/* Mode Sombre (dark) - Actif lorsque data-theme="dark" est sur <html> */
+[data-theme="dark"] {
+    --main-bg: #212529; /* Fond principal sombre (Noir Bootstrap) */
+    --main-text: #f8f9fa; /* Texte clair */
+    --header-footer-bg: #2b3035; /* Fond des nav/footer légèrement plus clair que le fond */
+    --card-bg: #2b3035; /* Arrière-plan des composants (cartes) */
+    --accent-color: #17a2b8; /* Couleur d'accentuation (Cyan/Info Bootstrap) */
+    --secondary-text: #adb5bd; /* Gris secondaire */
+    --table-strip-bg: #343a40; /* Couleur des lignes de tableau alternées */
+}
+
+/* Mode Clair (light) - Actif lorsque data-theme="light" est sur <html> */
+[data-theme="light"] {
+    --main-bg: #f8f9fa; /* Fond principal très clair (Light Bootstrap) */
+    --main-text: #212529; /* Texte très foncé */
+    --header-footer-bg: #e9ecef; /* Fond des nav/footer gris clair */
+    --card-bg: #ffffff; /* Arrière-plan des composants blanc */
+    --accent-color: #007bff; /* Bleu/Primary Bootstrap */
+    --secondary-text: #6c757d; /* Gris secondaire */
+    --table-strip-bg: #dee2e6; /* Couleur des lignes de tableau alternées */
+}
+
+/* -------------------------------------- */
+/* 2. Application des styles de base et transitions */
+/* -------------------------------------- */
+
+/* C'est cette règle qui change la couleur de fond du BODY ! */
+body {
+    background-color: var(--main-bg);
+    color: var(--main-text);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* -------------------------------------- */
+/* 3. Styles des composants personnalisés (Design cohérent) */
+/* -------------------------------------- */
+
+/* Styles pour la barre de navigation */
+.custom-navbar {
+    background-color: var(--header-footer-bg) !important;
+    border-bottom: 1px solid var(--accent-color);
+    transition: background-color var(--transition-speed), border-color var(--transition-speed);
+}
+.custom-brand {
+    color: var(--accent-color) !important;
+    font-weight: bold;
+}
+.custom-navbar .nav-link, .custom-navbar .navbar-toggler-icon {
+    color: var(--main-text) !important;
+    transition: color var(--transition-speed);
+}
+.custom-navbar .nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Styles du titre principal et des titres de section */
+.custom-text-accent {
+    color: var(--accent-color) !important;
+}
+
+/* Styles des cartes et sections de contenu */
+.custom-card {
+    background-color: var(--card-bg) !important;
+    border: 1px solid var(--secondary-text);
+    color: var(--main-text); /* Assure que le texte intérieur suit le thème */
+    transition: background-color var(--transition-speed), border-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* Styles du tableau d'informations */
+.custom-table {
+    /* Utilise les variables pour les couleurs de fond et de texte */
+    --bs-table-bg: var(--card-bg);
+    --bs-table-color: var(--main-text);
+    --bs-table-striped-bg: var(--table-strip-bg);
+    --bs-table-striped-color: var(--main-text);
+    border-color: var(--secondary-text);
+}
+.custom-table th {
+    color: var(--accent-color);
+}
+
+/* Style de l'image (Affiche) */
+.custom-border-accent {
+    border: 3px solid var(--accent-color);
+}
+.custom-text-secondary {
+    color: var(--secondary-text);
+}
+
+/* Styles du pied de page */
+.custom-footer {
+    background-color: var(--header-footer-bg);
+    color: var(--secondary-text);
+    border-top: 1px solid var(--secondary-text);
+    transition: background-color var(--transition-speed);
+}
