@@ -3,163 +3,160 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The 100 - Diffusions & Saisons</title>
+    <title>The 100 - Accueil</title>
     
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <link href="../style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        </header>
-
-    <main class="container py-5">
-        <h1 class="text-center custom-text-accent mb-5">
-            🗓️ Historique des Diffusions et Arcs Narratifs
-        </h1>
-
-        <div class="accordion" id="accordionSaisons">
-            
-            <div class="accordion-item custom-card mb-3">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button custom-text-accent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        SAISON 1 : L'Arrivée sur Terre
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionSaisons">
-                    <div class="accordion-body">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="../image/image_saison_1.webp" class="img-fluid rounded-3 mb-3 custom-border-accent" alt="Affiche Saison 1">
-                            </div>
-                            <div class="col-md-8">
-                                <p>
-                                    La première saison sert de fondation. 100 jeunes sont envoyés sur une Terre que l'on croyait inhabitable depuis 97 ans pour vérifier si l'Arche peut survivre. Leurs défis initiaux sont l'environnement hostile, la recherche de ressources, mais surtout la découverte que la planète est habitée par les **Natifs** (Grounders), menant au premier conflit majeur.
-                                </p>
-                                <h5 class="mt-3 custom-text-accent">Détails Clés</h5>
-                                <ul class="list-unstyled">
-                                    <li><strong>Diffusion Originale :</strong> 19 mars 2014 – 11 juin 2014</li>
-                                    <li><strong>Nombre d'épisodes :</strong> 13</li>
-                                    <li><strong>Lieux Clés :</strong> Le Camp (Camp Jaha), Le Mur de l'Arche.</li>
-                                    <li><strong>Thème Principal :</strong> Survie, découverte et premier contact.</li>
-                                </ul>
-                            </div>
-                        </div>
+        <nav class="navbar navbar-expand-lg custom-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand custom-text-accent fw-bold fs-4" href="index.html">
+                    The 100
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="personnages.html">Personnages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="diffusions.html">Diffusions/Saisons</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="d-flex">
+                        <button class="btn btn-outline-light btn-sm" id="darkModeToggle">
+                            Mode Clair ☀️
+                        </button>
                     </div>
                 </div>
             </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        
+        <section class="p-5 text-center custom-card mb-5">
+            <h1 class="display-4 fw-bold custom-text-accent">
+                Bienvenue sur The 100 Fan Hub
+            </h1>
+            <p class="lead text-white-50">
+                Explorez l'univers post-apocalyptique de la série culte The 100, de l'Arche aux mondes au-delà de l'Anomalie.
+            </p>
+            <hr class="my-4 custom-border-accent-hr">
+            <a class="btn btn-primary btn-lg custom-btn-primary" href="personnages.html" role="button">
+                Découvrir les Personnages Clés
+            </a>
+        </section>
+
+        <section class="row g-4 mb-5">
             
-            <div class="accordion-item custom-card mb-3">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed custom-text-accent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        SAISON 2 : Le Combat pour le Mont Weather
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionSaisons">
-                    <div class="accordion-body">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="../image/image_saison_2.webp" class="img-fluid rounded-3 mb-3 custom-border-accent" alt="Affiche Saison 2">
-                            </div>
-                            <div class="col-md-8">
-                                <p>
-                                    Après l'attaque des Natifs, une partie des 100 est capturée par les habitants du **Mont Weather**, des survivants de l'apocalypse qui vivent sous terre. Cette saison se concentre sur la tentative de sauvetage et le dilemme moral de Clarke face à un ennemi qui utilise les Natifs et les membres de l'Arche pour ses propres besoins. Elle culmine avec la décision la plus lourde de Clarke.
-                                </p>
-                                <h5 class="mt-3 custom-text-accent">Détails Clés</h5>
-                                <ul class="list-unstyled">
-                                    <li><strong>Diffusion Originale :</strong> 22 octobre 2014 – 11 mars 2015</li>
-                                    <li><strong>Nombre d'épisodes :</strong> 16</li>
-                                    <li><strong>Antagoniste :</strong> Les Hommes des Montagnes (Mont Weather).</li>
-                                    <li><strong>Thème Principal :</strong> Sacrifices, torture et le prix de la survie.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item custom-card mb-3">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed custom-text-accent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        SAISON 3 : La Cité de la Lumière et ALIE
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionSaisons">
-                    <div class="accordion-body">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="../image/image_saison_3.webp" class="img-fluid rounded-3 mb-3 custom-border-accent" alt="Affiche Saison 3">
-                            </div>
-                            <div class="col-md-8">
-                                <p>
-                                    L'intrigue se divise entre les conflits politiques et religieux chez les Natifs (Polis) et l'émergence de l'intelligence artificielle hostile, **ALIE**. ALIE cherche à forcer l'humanité à rejoindre la "Cité de la Lumière" pour échapper à la douleur. La saison met en lumière les origines de l'apocalypse et le rôle du Comandeur Lexa dans la culture des Natifs.
-                                </p>
-                                <h5 class="mt-3 custom-text-accent">Détails Clés</h5>
-                                <ul class="list-unstyled">
-                                    <li><strong>Diffusion Originale :</strong> 21 janvier 2016 – 19 mai 2016</li>
-                                    <li><strong>Nombre d'épisodes :</strong> 16</li>
-                                    <li><strong>Antagoniste :</strong> ALIE (Intelligence Artificielle) et Pike.</li>
-                                    <li><strong>Thème Principal :</strong> Intelligence artificielle, croyances et conflits politiques.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item custom-card mb-3">
-                <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed custom-text-accent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        SAISON 4 : (À Compléter)
-                    </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionSaisons">
-                    <div class="accordion-body">
-                        </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item custom-card mb-3">
-                <h2 class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed custom-text-accent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        SAISON 5 : (À Compléter)
-                    </button>
-                </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionSaisons">
-                    <div class="accordion-body">
-                         </div>
-                </div>
-            </div>
-            
-            <div class="accordion-item custom-card mb-3">
-                <h2 class="accordion-header" id="headingSix">
-                    <button class="accordion-button collapsed custom-text-accent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                        SAISON 6 : (À Compléter)
-                    </button>
-                </h2>
-                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionSaisons">
-                    <div class="accordion-body">
-                         </div>
-                </div>
-            </div>
-            
-             <div class="accordion-item custom-card mb-3">
-                <h2 class="accordion-header" id="headingSeven">
-                    <button class="accordion-button collapsed custom-text-accent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                        SAISON 7 : (À Compléter)
-                    </button>
-                </h2>
-                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionSaisons">
-                    <div class="accordion-body">
-                         </div>
+            <div class="col-lg-6">
+                <div class="custom-card p-4 h-100">
+                    <h2 class="custom-text-accent mb-3">L'Histoire</h2>
+                    <p>
+                        Après une apocalypse nucléaire qui a rendu la Terre inhabitable, les survivants vivent depuis près de 100 ans à bord de l'Arche, une station spatiale. Face à la surpopulation et à la défaillance des systèmes, le Conseil décide d'envoyer 100 jeunes délinquants sur Terre pour tester sa viabilité. Livrés à eux-mêmes, ces jeunes doivent faire des choix moraux impossibles pour survivre face à un environnement hostile et à de mystérieux habitants : les Natifs (Grounders).
+                    </p>
                 </div>
             </div>
 
-        </div>
-        </main>
+            <div class="col-lg-6">
+                <div class="custom-card p-4 h-100">
+                    <h2 class="custom-text-accent mb-3">Thèmes Abordés</h2>
+                    <ul class="list-unstyled">
+                        <li><span class="custom-text-accent fw-bold">Le Mal Nécessaire :</span> Jusqu'où aller pour sauver son peuple ?</li>
+                        <li><span class="custom-text-accent fw-bold">Le Cycle de la Violence :</span> La guerre est-elle une fatalité pour l'humanité ?</li>
+                        <li><span class="custom-text-accent fw-bold">L'Identité et le Devenir :</span> Comment les traumatismes forgent-ils le leadership et la conscience ?</li>
+                        <li><span class="custom-text-accent fw-bold">L'Écologie :</span> La fragilité des ressources et la protection de la planète.</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </section>
+        
+        <section class="mt-5">
+            <h2 class="text-center custom-text-accent mb-4">
+                Aperçu des Arcs Narratifs Majeurs
+            </h2>
 
-    <script src="../js/bootstrap.bundle.min.js"></script>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                
+                <div class="col">
+                    <div class="custom-card h-100 p-4">
+                        <h3 class="custom-text-accent fs-5 fw-bold">Saisons 1 & 2 : Terre et Mont Weather</h3>
+                        <p class="text-white-50">La descente sur Terre, la survie dans un monde hostile et le conflit moral contre les Hommes des Montagnes. C'est l'ère des alliances fragiles et des décisions impossibles pour sauver son peuple.</p>
+                        <a href="diffusions.html#collapseOne" class="btn btn-sm custom-btn-secondary mt-2">Détails</a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="custom-card h-100 p-4">
+                        <h3 class="custom-text-accent fs-5 fw-bold">Saisons 3 & 4 : ALIE et Praimfaya</h3>
+                        <p class="text-white-50">L'introduction de la menace technologique (ALIE) et la course désespérée contre la deuxième apocalypse nucléaire. Le groupe doit s'unir pour trouver des abris face à l'extinction.</p>
+                        <a href="diffusions.html#collapseThree" class="btn btn-sm custom-btn-secondary mt-2">Détails</a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="custom-card h-100 p-4">
+                        <h3 class="custom-text-accent fs-5 fw-bold">Saisons 5 à 7 : Sanctum et l'Anomalie</h3>
+                        <p class="text-white-50">Six ans plus tard, l'humanité voyage vers de nouvelles planètes via l'Anomalie. De nouveaux conflits, des sociétés complexes, et la quête finale de la transcendance et de la paix.</p>
+                        <a href="diffusions.html#collapseFive" class="btn btn-sm custom-btn-secondary mt-2">Détails</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
     
+    <footer class="text-center py-4 mt-5 custom-navbar">
+        <p class="mb-0 text-white-50">Site fan non officiel de The 100. &copy; 2025</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('darkModeToggle');
+            const htmlElement = document.documentElement;
+
+            if (!themeToggle) return; 
+
+            // Fonction pour appliquer le thème et mettre à jour le bouton
+            function updateTheme(theme) {
+                htmlElement.setAttribute('data-bs-theme', theme); 
+                
+                // Met à jour le texte et l'icône du bouton
+                if (theme === 'dark') {
+                    themeToggle.textContent = 'Mode Clair ☀️';
+                } else {
+                    themeToggle.textContent = 'Mode Sombre 🌙';
+                }
+            }
+
+            // Lit le thème actuel (défaut 'dark' si non défini)
+            let currentTheme = htmlElement.getAttribute('data-bs-theme') || 'dark';
+            updateTheme(currentTheme);
+
+            // Événement au clic
+            themeToggle.addEventListener('click', () => {
+                // Change 'dark' en 'light' ou 'light' en 'dark'
+                currentTheme = (currentTheme === 'dark') ? 'light' : 'dark';
+                updateTheme(currentTheme);
+            });
+        });
+    </script>
 </body>
 </html>
