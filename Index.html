@@ -14,9 +14,7 @@
     <header class="shadow-sm">
         <nav class="navbar navbar-expand-lg custom-navbar">
             <div class="container-fluid">
-               <a class="navbar-brand custom-text-accent fw-bold fs-4" href="../Index.html">
-    The 100
-</a>
+               <a class="navbar-brand custom-text-accent fw-bold fs-4" > The 100 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -59,7 +57,7 @@
             <div class="col-lg-4 mb-5">
                 
                 <section class="mb-4">
-                    <h2 class="custom-text-accent">🖼️ Affiche / Visuel</h2>
+                    <h2 class="custom-text-accent">Affiche / Visuel</h2>
                     <figure class="figure">
                         <img src="./image/the-100.webp" class="figure-img img-fluid rounded custom-border-accent" alt="Affiche de la série">
                         <figcaption class="figure-caption text-center custom-text-secondary">Affiche de la serie THE 100</figcaption>
@@ -67,7 +65,7 @@
                 </section>
                 
                 <section>
-                    <h2 class="custom-text-accent">ℹ️ Informations Générales</h2>
+                    <h2 class="custom-text-accent">Informations Générales</h2>
                     <table class="table custom-table">
                         <tbody>
                             <tr><th>Titre Original</th><td>The 100</td></tr>
@@ -81,7 +79,7 @@
                 </section>
              <section class="mb-5">
                     <div class="custom-card p-4">
-                        <h2 class="custom-text-accent">Trailer Officiel 🎬</h2>
+                        <h2 class="custom-text-accent">Trailer Officiel </h2>
                         <div class="embed-responsive embed-responsive-16by9 ratio ratio-16x9">
                             <iframe 
                                 class="embed-responsive-item" 
@@ -112,11 +110,9 @@
 
             if (!themeToggle) return; 
 
-            // Fonction pour appliquer le thème et mettre à jour le bouton
             function updateTheme(theme) {
                 htmlElement.setAttribute('data-theme', theme);
                 
-                // Met à jour le texte et les classes Bootstrap du bouton
                 if (theme === 'dark') {
                     themeToggle.classList.remove('btn-outline-primary');
                     themeToggle.classList.add('btn-outline-info');
@@ -128,13 +124,11 @@
                 }
             }
 
-            // Lit le thème actuel (déterminé par l'attribut data-theme sur <html>)
             let currentTheme = htmlElement.getAttribute('data-theme') || 'dark';
             updateTheme(currentTheme);
 
             // Événement au clic
             themeToggle.addEventListener('click', () => {
-                // Change 'dark' en 'light' ou 'light' en 'dark'
                 currentTheme = (currentTheme === 'dark') ? 'light' : 'dark';
                 updateTheme(currentTheme);
             });

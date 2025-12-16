@@ -1,50 +1,40 @@
-/* ==================================== */
-/* 1. DÉFINITION DES THÈMES (VARIABLES CSS) */
-/* ==================================== */
 
-/* --- THÈME SOMBRE (DARK MODE) --- */
 [data-theme="dark"] {
     --main-bg: #121212; 
     --card-bg: #1e1e1e; 
     --custom-footer-bg: #1f1f1f; 
     --navbar-bg: #1f1f1f;
     
-    --main-text: #e0e0e0; /* CLAIR */
-    --secondary-text: #b0b0b0; 
+    --main-text: #e0e0e0; 
+    --secondary-text: #fff8f8; 
     --link-color: #63b3ed; 
     
     --accent-color: #4dc0c8; 
     --table-border-color: #2b2b2b;
 }
 
-/* --- THÈME CLAIR (LIGHT MODE) --- */
 [data-theme="light"] {
     --main-bg: #f4f4f4; 
     --card-bg: #ffffff; 
     --custom-footer-bg: #e0e0e0;
     --navbar-bg: #ffffff;
     
-    --main-text: #050505; /* FONCÉ */
-    --secondary-text: #ffffff; 
+    --main-text: #050505; 
+    --secondary-text: #0f0f0f; 
     --link-color: #3b82f6; 
     
     --accent-color: #1e40af; 
     --table-border-color: #000000; 
 }
 
-/* ==================================== */
-/* 2. STYLES GLOBALES & APPLICATION DU THÈME (avec !important) */
-/* ==================================== */
 
 body {
-    /* Utilisation de !important pour s'assurer que le thème écrase Bootstrap */
     background-color: var(--main-bg) !important;
     color: var(--main-text) !important; 
     transition: background-color 0.4s, color 0.4s;
     min-height: 100vh;
 }
 
-/* Styles pour les éléments de l'en-tête et du footer */
 .custom-navbar {
     background-color: var(--navbar-bg) !important;
     border-bottom: 1px solid var(--table-border-color);
@@ -55,7 +45,6 @@ body {
     font-weight: 700;
 }
 
-/* Styles pour les liens de navigation */
 .navbar-nav .nav-link {
     color: var(--main-text) !important;
     transition: color 0.3s;
@@ -69,25 +58,19 @@ body {
     padding-bottom: 5px;
 }
 
-/* ==================================== */
-/* 3. STYLES DES COMPOSANTS (avec !important si nécessaire) */
-/* ==================================== */
 
-/* Application de la couleur d'accentuation aux titres et éléments clés */
 .custom-text-accent {
     color: var(--accent-color) !important;
 }
 
-/* Style spécifique pour le paragraphe d'introduction (classe .lead) */
 .lead {
     font-size: 1.25rem;
     font-weight: 400;
-    color: var(--main-text) !important; /* Ajout de !important */
+    color: var(--main-text) !important; 
 }
 
-/* Style pour la section Synopsis/Carte */
 .custom-card {
-    background-color: var(--card-bg) !important; /* Ajout de !important */
+    background-color: var(--card-bg) !important; 
     border: 1px solid var(--table-border-color);
     border-radius: 8px;
     padding: 20px;
@@ -95,9 +78,8 @@ body {
     transition: background-color 0.4s, border-color 0.4s;
 }
 
-/* Bordure de l'affiche */
 .custom-border-accent {
-    border: 3px solid var(--accent-color) !important; /* Ajout de !important */
+    border: 3px solid var(--accent-color) !important; 
     border-radius: 6px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     width: 100%;
@@ -106,14 +88,11 @@ body {
     object-position: center;
 }
 
-/* Texte de la légende sous l'image */
 .figure-caption {
     color: var(--secondary-text) !important;
 }
 
-/* Styles pour le tableau d'informations générales */
 .custom-table {
-    /* Utilisation des variables Bootstrap qui elles-mêmes sont injectées par le thème */
     --bs-table-bg: var(--card-bg); 
     --bs-table-color: var(--main-text);
     --bs-table-border-color: var(--table-border-color); 
@@ -127,36 +106,55 @@ body {
     width: 40%; 
 }
 
-/* Styles pour le footer */
 .custom-footer {
-    background-color: var(--custom-footer-bg) !important; /* Ajout de !important */
+    background-color: var(--custom-footer-bg) !important;
     color: var(--secondary-text) !important;
     border-top: 1px solid var(--table-border-color);
     transition: background-color 0.4s, color 0.4s;
 }
-/* FORCE la couleur du texte pour les paragraphes et le texte dans les cartes, écrasant Bootstrap */
 p, .card-text, .card-body {
     color: var(--main-text) !important;
 }
-/* CORRECTION FINALE DE HAUTEUR POUR LA GRILLE DE PERSONNAGES */
 
-/* 1. Cibler spécifiquement les colonnes de la grille de 3 (row-cols-lg-3) */
-/* C'est très spécifique et devrait annuler tout autre conflit */
-/* CORRECTION ULTIME DE HAUTEUR DES CARTES */
 
-/* 1. Rendre le conteneur principal flexible */
 main .container .row {
     display: flex;
-    flex-wrap: wrap; /* Assure que les éléments passent à la ligne */
-    align-items: stretch; /* Essayer de stretch directement ici */
+    flex-wrap: wrap; 
+    align-items: stretch; 
 }
 
 
 
-/* Style pour les images d'affiches dans l'accordéon */
 .accordion-arc-img {
-    max-height: 200px; /* Limite la hauteur de l'image */
+    max-height: 200px;
     width: 100%;
-    object-fit: contain; /* Assure que l'image est entièrement visible */
+    object-fit: contain; 
     border-radius: 0.25rem;
+}
+
+.text-white-50 {
+    color: var(--secondary-text) !important;
+    opacity: 1 !important; 
+}
+.custom-accordion .accordion-button {
+    background-color: var(--card-bg) !important;
+    color: var(--main-text) !important;
+    box-shadow: none !important;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+    background-color: color-mix(in srgb, var(--card-bg) 90%, var(--accent-color) 10%) !important;
+    color: var(--main-text) !important;
+    border-bottom: 1px solid var(--table-border-color) !important;
+}
+
+.custom-accordion .accordion-body {
+    background-color: var(--card-bg) !important;
+    color: var(--main-text) !important;
+    border-top: 1px solid rgba(0,0,0,0.04) !important;
+}
+
+.custom-accordion.accordion-flush .accordion-item {
+    border-color: transparent !important;
 }
