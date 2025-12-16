@@ -25,11 +25,11 @@
     --navbar-bg: #ffffff;
     
     --main-text: #050505; /* FONCÉ */
-    --secondary-text: #fffefe; 
+    --secondary-text: #ffffff; 
     --link-color: #3b82f6; 
     
     --accent-color: #1e40af; 
-    --table-border-color: #cccccc; 
+    --table-border-color: #000000; 
 }
 
 /* ==================================== */
@@ -153,122 +153,10 @@ main .container .row {
 
 
 
-/* ======================================= */
-/* 5. STYLES SPÉCIFIQUES À LA PAGE SAISONS */
-/* ======================================= */
-
-/* --- Styles de l'Accordéon Général --- */
-
-.accordion {
-    /* Retirer la bordure par défaut de Bootstrap */
-    --bs-accordion-border-width: 0;
+/* Style pour les images d'affiches dans l'accordéon */
+.accordion-arc-img {
+    max-height: 200px; /* Limite la hauteur de l'image */
+    width: 100%;
+    object-fit: contain; /* Assure que l'image est entièrement visible */
+    border-radius: 0.25rem;
 }
-
-.accordion-item {
-    /* Utiliser notre style de carte personnalisé pour les séparateurs */
-    border: 1px solid var(--table-border-color); 
-    border-radius: 8px !important;
-    margin-bottom: 20px; /* Espace entre chaque saison */
-    background-color: var(--card-bg);
-}
-
-/* --- Styles du Bouton/Tête de Saison --- */
-
-.accordion-button {
-    /* Style du fond du bouton/titre de saison */
-    background-color: var(--card-bg) !important;
-    color: var(--text-color) !important; /* Couleur du texte par défaut */
-    font-weight: bold;
-    font-size: 1.25rem;
-    padding: 15px 20px;
-}
-
-/* Quand la saison est ouverte (bouton actif) */
-.accordion-button:not(.collapsed) {
-    color: var(--custom-accent-color) !important; /* Couleur accentuée quand ouvert */
-    background-color: var(--card-bg) !important;
-    box-shadow: none; /* Retirer l'ombre au focus/clic */
-    border-bottom: 1px solid var(--table-border-color); /* Séparateur avec le contenu */
-}
-
-/* Retirer le focus bleu/anneau disgracieux au clic */
-.accordion-button:focus {
-    box-shadow: none;
-    border-color: transparent;
-}
-
-/* --- Styles du Contenu de l'Accordéon (Corps) --- */
-
-.accordion-body {
-    padding: 20px;
-    background-color: var(--card-bg);
-}
-
-/* --- Style des Images de Saison --- */
-
-.accordion-body img {
-    /* Assure que l'image a une belle bordure et est responsive */
-    border: 1px solid var(--custom-accent-color);
-}
-/* ======================================= */
-/* 7. STYLES SPÉCIFIQUES À LA PAGE D'ACCUEIL (index.html) */
-/* ======================================= */
-
-/* --- Section Héro (Bannière d'Introduction) --- */
-
-/* La bannière utilise déjà la classe .custom-card, 
-   nous n'avons besoin que de styliser ses éléments internes */
-section.p-5 {
-    /* Assure que la section a un peu d'arrondi et d'ombre grâce à .custom-card */
-}
-
-/* Style de la ligne de séparation (hr) */
-.custom-border-accent-hr {
-    border-top: 1px solid var(--custom-accent-color);
-    opacity: 0.5;
-    width: 50%; /* Rendre la ligne un peu plus courte */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* --- Style du Bouton Principal --- */
-
-.custom-btn-primary {
-    background-color: var(--custom-accent-color) !important;
-    border-color: var(--custom-accent-color) !important;
-    color: var(--card-bg) !important; /* Texte sombre sur fond accentué */
-    font-weight: bold;
-    padding: 10px 25px;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-.custom-btn-primary:hover,
-.custom-btn-primary:focus {
-    background-color: var(--custom-accent-color-hover) !important; /* Une nuance plus foncée au survol */
-    border-color: var(--custom-accent-color-hover) !important;
-}
-
-/* --- Pied de Page (Footer) --- */
-
-footer {
-    /* Le footer utilise la classe .custom-navbar pour le fond sombre */
-    background-color: var(--navbar-bg) !important;
-    color: var(--text-color-faded) !important; /* Texte clair et atténué */
-    border-top: 1px solid var(--table-border-color); /* Ligne de séparation avec la page */
-}
-
-/* Style pour la liste des thèmes (pour les petites puces) */
-.list-unstyled li {
-    padding-left: 10px;
-    margin-bottom: 5px;
-}
-
-/* Ajout d'une puce personnalisée pour les listes */
-.list-unstyled li::before {
-    content: "•";
-    color: var(--custom-accent-color); 
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-}
-
